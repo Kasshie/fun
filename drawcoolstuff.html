@@ -29,13 +29,11 @@
           var foo, i, j, r;
           foo = Math.sin(t) * 3 * Math.PI;
           for (i=0; i<200; ++i) {
-            r = 150 * Math.sin(i * foo);
+            r = 250 * Math.sin(i * foo);
             $.globalCompositeOperation = '';
             $.fillStyle = 'hsla(' + i + 15 + ',100%, 60%,1)';
             $.beginPath();
-            $.arc(Math.sin(i) * r + (c.width / 2), 
-                  Math.cos(i) * r + (c.height / 2), 
-                  1.5, 0, Math.PI * 3);
+            $.arc(Math.sin(i) * r + (c.width / 2), Math.cos(i) * r + (c.height / 2), 1.5, 0, Math.PI * 3);
             $.fill();
 
           }
